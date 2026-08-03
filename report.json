@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-07-07T08:50:14Z",
+  "generated_at": "2026-08-03T20:12:56Z",
   "title": "Documentation-bug upstream report/fix report",
   "scope": "Documentation bugs where upstream maintainer reports and fixes are recorded when available.",
   "summary": {
     "cases_total": 66,
     "reports_to_maintainers": 22,
-    "fixes_landed": 14,
+    "fixes_landed": 15,
     "issues_reported": 6,
     "pull_requests_reported": 11,
     "status_counts": {
-      "confirmed": 18,
-      "fixed": 26,
+      "confirmed": 16,
+      "fixed": 28,
       "reported": 22
     },
     "unfixed_reported_cases": 22,
-    "fixed_entries": 26,
+    "fixed_entries": 28,
     "maintainer_artifacts_total": 22,
     "lifecycle_counts": {
       "triaged": 66,
       "reported": 66,
       "confirmed": 44,
-      "fixed": 26
+      "fixed": 28
     },
     "counting_note": "Lifecycle counts are cumulative: fixed cases are also counted as confirmed, reported, and triaged; confirmed cases are also counted as reported and triaged; unreported true positives are counted only as triaged. Report artifact counts are unique by URL; reports_to_maintainers includes GitHub issues, GitHub pull requests, and direct mailing-list patch reports, so multiple cases can share one upstream report. All stale-DAMON-translation entries carry one mailing-list patch-series report archived on lore.kernel.org.",
-    "confirmed_entries": 18,
+    "confirmed_entries": 16,
     "triaged_unreported_entries": 0,
     "gist_reports": 0,
-    "generated_at": "2026-07-07T08:50:14Z",
+    "generated_at": "2026-08-03T20:12:56Z",
     "fixed_report_kinds": {
       "github_issue": 5,
       "github_pull_request": 23,
-      "mailing_list_patch": 4
+      "mailing_list_patch": 6
     },
     "fixed_fix_kinds": {
-      "git_commit": 4,
+      "git_commit": 6,
       "github_commit": 23
     },
     "mailing_list_reports": 5
@@ -968,7 +968,7 @@
     {
       "id": "linux-it-rust-msrv-translation-stale",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale Italian translation of Rust minimum version",
         "description": "Documentation/translations/it_IT/process/changes.rst still states the minimum Rust version is 1.78.0 while the current English/kernel requirement is 1.85.0.",
@@ -997,35 +997,73 @@
       "reports_to_maintainers": [
         {
           "kind": "mailing_list_patch",
-          "url": "https://lore.kernel.org/linux-doc/20260617085305.3205822-1-doehyunbaek@gmail.com/",
-          "title": "[PATCH] Docs/translations/it_IT: update current minimal requirements",
-          "created_at": "2026-06-17T08:54:42Z",
-          "body_excerpt": "Patch sent to linux-doc and Italian translation maintainers: update Documentation/translations/it_IT/process/changes.rst so the translated current minimal requirements table matches Documentation/process/changes.rst.",
+          "url": "https://lore.kernel.org/linux-doc/20260726063928.1322676-1-doehyunbaek@gmail.com/",
+          "title": "[PATCH v5] Docs/translations/it_IT: sync changes.rst requirements",
+          "created_at": "2026-07-26T06:39:34Z",
+          "body_excerpt": "Patch sent to linux-doc and Italian translation maintainers synchronizes the current requirements table and directly related text in Documentation/translations/it_IT/process/changes.rst with the English documentation.",
           "reported_by": "doehyunbaek",
-          "state": "reviewed_acknowledged",
+          "state": "applied_to_docs_next",
           "maintainer_comments": [
             {
-              "created_at": "2026-06-17T13:47:34Z",
+              "created_at": "2026-07-26T13:24:17Z",
               "author": "Federico Vaga",
-              "url": "https://lore.kernel.org/linux-doc/zJRp95X2zpOwl0JF9O3s_dQfHMeozA4ondxH1RSqBj9KK4jYkV3pWJpNwavq6WlYNbGv3BVBxK8jyc-VhlU62IlfBVhFnGQqnkz71efYe2w=@vaga.pv.it/",
-              "body": "Federico Vaga replied to the patch: \"Hi and thank you Doehyun. It looks all good to me.\"",
-              "interpretation": "Italian translation maintainer Federico Vaga replied that the patch \"looks all good\"; counted as confirmation of the Rust minimum-version translation alert."
+              "url": "https://lore.kernel.org/linux-doc/noc35tgvjfb3bph6wapjw2jmdrzsjczqqih756bcpbrgygfk4q@y63j2ed3aepo/",
+              "body": "Hi Doehyun,\n\nit looks good to me.\n\nAcked-by: Federico Vaga <federico.vaga@vaga.pv.it>",
+              "interpretation": "Italian translation maintainer Federico Vaga acknowledged the v5 patch correcting the Rust minimum-version translation."
+            },
+            {
+              "created_at": "2026-08-03T12:31:31-06:00",
+              "author": "Jonathan Corbet",
+              "url": "https://lore.kernel.org/linux-doc/877bm7ys1o.fsf@trenco.lwn.net/",
+              "body": "Applied, thanks.",
+              "interpretation": "Jonathan Corbet confirmed that the Italian requirements synchronization patch was applied to docs-next as b27b15d06e66."
             }
-          ]
+          ],
+          "note": "Federico Vaga provided Acked-by on 2026-07-26, and Jonathan Corbet applied v5 to docs-next as b27b15d06e66 on 2026-08-03.",
+          "applied_at": "2026-08-03T12:31:00-06:00",
+          "applied_commit": "b27b15d06e664d72d477ca576dcf7ca588cadd49",
+          "applied_url": "https://git.kernel.org/pub/scm/linux/kernel/git/corbet/linux.git/commit/?h=docs-next&id=b27b15d06e664d72d477ca576dcf7ca588cadd49",
+          "applied_branch": "docs-next"
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "b27b15d06e664d72d477ca576dcf7ca588cadd49",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/corbet/linux.git/commit/?h=docs-next&id=b27b15d06e664d72d477ca576dcf7ca588cadd49",
+          "message": "Docs/translations/it_IT: sync changes.rst requirements",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-07-26T06:39:27Z"
+          },
+          "committer": {
+            "date": "2026-08-03T12:31:00-06:00",
+            "name": "Jonathan Corbet"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/it_IT/process/changes.rst",
+              "additions": 73,
+              "deletions": 45,
+              "patch_excerpt": "-Rust (opzionale)       1.78.0             rustc --version\n+Rust (opzionale)       1.85.0           rustc --version"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Source alert taken from annotations/triage_output_72c7.json line 5632; source input is recorded in annotations/triage_input.json line 5636.",
-        "Reported together with the other Italian changes.rst minimum-requirement translation update in gist 326846792e53796ac4b3c5634f50f3dd.",
-        "Mailing-list reply https://lore.kernel.org/linux-doc/zJRp95X2zpOwl0JF9O3s_dQfHMeozA4ondxH1RSqBj9KK4jYkV3pWJpNwavq6WlYNbGv3BVBxK8jyc-VhlU62IlfBVhFnGQqnkz71efYe2w=@vaga.pv.it/ archives Federico Vaga's 2026-06-17T13:43:10Z reply: \"Hi and thank you Doehyun. It looks all good to me.\" This maintainer acknowledgement is counted as confirmation for the Rust minimum-version translation alert. No landed upstream fix is recorded as of 2026-06-17T13:48:34Z."
+        "The final v5 patch was acknowledged by Federico Vaga and applied by Jonathan Corbet to docs-next as b27b15d06e664d72d477ca576dcf7ca588cadd49: https://git.kernel.org/pub/scm/linux/kernel/git/corbet/linux.git/commit/?h=docs-next&id=b27b15d06e664d72d477ca576dcf7ca588cadd49",
+        "The applied patch updates the Italian Rust minimum from 1.78.0 to 1.85.0."
       ],
-      "classification_note": "confirmed by Italian translation maintainer Federico Vaga's acknowledgement in gist comment 6203699; open/unfixed as of 2026-06-17T13:48:34Z"
+      "classification_note": "fixed by docs-next commit b27b15d06e66 after Federico Vaga Acked-by and Jonathan Corbet applied the Italian requirements synchronization patch"
     },
     {
       "id": "linux-it-bindgen-version-translation-stale",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale Italian translation of bindgen minimum version",
         "description": "Documentation/translations/it_IT/process/changes.rst still states the minimum bindgen version is 0.65.1 while the current required minimum is 0.71.1.",
@@ -1054,30 +1092,68 @@
       "reports_to_maintainers": [
         {
           "kind": "mailing_list_patch",
-          "url": "https://lore.kernel.org/linux-doc/20260617085305.3205822-1-doehyunbaek@gmail.com/",
-          "title": "[PATCH] Docs/translations/it_IT: update current minimal requirements",
-          "created_at": "2026-06-17T08:54:42Z",
-          "body_excerpt": "Patch sent to linux-doc and Italian translation maintainers: update Documentation/translations/it_IT/process/changes.rst so the translated current minimal requirements table matches Documentation/process/changes.rst.",
+          "url": "https://lore.kernel.org/linux-doc/20260726063928.1322676-1-doehyunbaek@gmail.com/",
+          "title": "[PATCH v5] Docs/translations/it_IT: sync changes.rst requirements",
+          "created_at": "2026-07-26T06:39:34Z",
+          "body_excerpt": "Patch sent to linux-doc and Italian translation maintainers synchronizes the current requirements table and directly related text in Documentation/translations/it_IT/process/changes.rst with the English documentation.",
           "reported_by": "doehyunbaek",
-          "state": "reviewed_acknowledged",
+          "state": "applied_to_docs_next",
           "maintainer_comments": [
             {
-              "created_at": "2026-06-17T13:47:34Z",
+              "created_at": "2026-07-26T13:24:17Z",
               "author": "Federico Vaga",
-              "url": "https://lore.kernel.org/linux-doc/zJRp95X2zpOwl0JF9O3s_dQfHMeozA4ondxH1RSqBj9KK4jYkV3pWJpNwavq6WlYNbGv3BVBxK8jyc-VhlU62IlfBVhFnGQqnkz71efYe2w=@vaga.pv.it/",
-              "body": "Federico Vaga replied to the patch: \"Hi and thank you Doehyun. It looks all good to me.\"",
-              "interpretation": "Italian translation maintainer Federico Vaga replied that the patch \"looks all good\"; counted as confirmation of the bindgen minimum-version translation alert."
+              "url": "https://lore.kernel.org/linux-doc/noc35tgvjfb3bph6wapjw2jmdrzsjczqqih756bcpbrgygfk4q@y63j2ed3aepo/",
+              "body": "Hi Doehyun,\n\nit looks good to me.\n\nAcked-by: Federico Vaga <federico.vaga@vaga.pv.it>",
+              "interpretation": "Italian translation maintainer Federico Vaga acknowledged the v5 patch correcting the bindgen minimum-version translation."
+            },
+            {
+              "created_at": "2026-08-03T12:31:31-06:00",
+              "author": "Jonathan Corbet",
+              "url": "https://lore.kernel.org/linux-doc/877bm7ys1o.fsf@trenco.lwn.net/",
+              "body": "Applied, thanks.",
+              "interpretation": "Jonathan Corbet confirmed that the Italian requirements synchronization patch was applied to docs-next as b27b15d06e66."
             }
-          ]
+          ],
+          "note": "Federico Vaga provided Acked-by on 2026-07-26, and Jonathan Corbet applied v5 to docs-next as b27b15d06e66 on 2026-08-03.",
+          "applied_at": "2026-08-03T12:31:00-06:00",
+          "applied_commit": "b27b15d06e664d72d477ca576dcf7ca588cadd49",
+          "applied_url": "https://git.kernel.org/pub/scm/linux/kernel/git/corbet/linux.git/commit/?h=docs-next&id=b27b15d06e664d72d477ca576dcf7ca588cadd49",
+          "applied_branch": "docs-next"
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "b27b15d06e664d72d477ca576dcf7ca588cadd49",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/corbet/linux.git/commit/?h=docs-next&id=b27b15d06e664d72d477ca576dcf7ca588cadd49",
+          "message": "Docs/translations/it_IT: sync changes.rst requirements",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-07-26T06:39:27Z"
+          },
+          "committer": {
+            "date": "2026-08-03T12:31:00-06:00",
+            "name": "Jonathan Corbet"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/it_IT/process/changes.rst",
+              "additions": 73,
+              "deletions": 45,
+              "patch_excerpt": "-bindgen (opzionale)    0.65.1             bindgen --version\n+bindgen (opzionale)    0.71.1           bindgen --version"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Source alert taken from annotations/triage_output_72c7.json line 5587; source input is recorded in annotations/triage_input.json line 5591.",
-        "Reported together with the other Italian changes.rst minimum-requirement translation update in gist 326846792e53796ac4b3c5634f50f3dd.",
-        "Mailing-list reply https://lore.kernel.org/linux-doc/zJRp95X2zpOwl0JF9O3s_dQfHMeozA4ondxH1RSqBj9KK4jYkV3pWJpNwavq6WlYNbGv3BVBxK8jyc-VhlU62IlfBVhFnGQqnkz71efYe2w=@vaga.pv.it/ archives Federico Vaga's 2026-06-17T13:43:10Z reply: \"Hi and thank you Doehyun. It looks all good to me.\" This maintainer acknowledgement is counted as confirmation for the bindgen minimum-version translation alert. No landed upstream fix is recorded as of 2026-06-17T13:48:34Z."
+        "The final v5 patch was acknowledged by Federico Vaga and applied by Jonathan Corbet to docs-next as b27b15d06e664d72d477ca576dcf7ca588cadd49: https://git.kernel.org/pub/scm/linux/kernel/git/corbet/linux.git/commit/?h=docs-next&id=b27b15d06e664d72d477ca576dcf7ca588cadd49",
+        "The applied patch updates the Italian bindgen minimum from 0.65.1 to 0.71.1."
       ],
-      "classification_note": "confirmed by Italian translation maintainer Federico Vaga's acknowledgement in gist comment 6203699; open/unfixed as of 2026-06-17T13:48:34Z"
+      "classification_note": "fixed by docs-next commit b27b15d06e66 after Federico Vaga Acked-by and Jonathan Corbet applied the Italian requirements synchronization patch"
     },
     {
       "id": "linux-cgroup-v2-vmalloc-numa-stat-doc-marker-stale",
