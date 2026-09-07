@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-08-03T20:12:56Z",
+  "generated_at": "2026-09-07T05:50:00Z",
   "title": "Documentation-bug upstream report/fix report",
   "scope": "Documentation bugs where upstream maintainer reports and fixes are recorded when available.",
   "summary": {
     "cases_total": 66,
     "reports_to_maintainers": 22,
-    "fixes_landed": 15,
+    "fixes_landed": 16,
     "issues_reported": 6,
     "pull_requests_reported": 11,
     "status_counts": {
-      "confirmed": 16,
-      "fixed": 28,
+      "confirmed": 8,
+      "fixed": 36,
       "reported": 22
     },
     "unfixed_reported_cases": 22,
-    "fixed_entries": 28,
+    "fixed_entries": 36,
     "maintainer_artifacts_total": 22,
     "lifecycle_counts": {
       "triaged": 66,
       "reported": 66,
       "confirmed": 44,
-      "fixed": 28
+      "fixed": 36
     },
     "counting_note": "Lifecycle counts are cumulative: fixed cases are also counted as confirmed, reported, and triaged; confirmed cases are also counted as reported and triaged; unreported true positives are counted only as triaged. Report artifact counts are unique by URL; reports_to_maintainers includes GitHub issues, GitHub pull requests, and direct mailing-list patch reports, so multiple cases can share one upstream report. All stale-DAMON-translation entries carry one mailing-list patch-series report archived on lore.kernel.org.",
-    "confirmed_entries": 16,
+    "confirmed_entries": 8,
     "triaged_unreported_entries": 0,
     "gist_reports": 0,
-    "generated_at": "2026-08-03T20:12:56Z",
+    "generated_at": "2026-09-07T05:50:00Z",
     "fixed_report_kinds": {
       "github_issue": 5,
       "github_pull_request": 23,
-      "mailing_list_patch": 6
+      "mailing_list_patch": 14
     },
     "fixed_fix_kinds": {
-      "git_commit": 6,
+      "git_commit": 14,
       "github_commit": 23
     },
     "mailing_list_reports": 5
@@ -42,7 +42,7 @@
     {
       "id": "linux-damon-zh-cn-goal-tuner",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale translated DAMON documentation",
         "description": "English documentation updated to include goal_tuner file, but Chinese (zh_CN) translation still shows old quotas file list without goal_tuner.",
@@ -92,12 +92,36 @@
           ]
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "message": "docs/zh_CN: update DAMON usage translation",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-08-18T07:03:47Z"
+          },
+          "committer": {
+            "name": "Alex Shi",
+            "date": "2026-09-07T10:25:56+08:00"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/zh_CN/admin-guide/mm/damon/usage.rst"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Imported from the DAMON stale-translation triage set; reported to maintainers as a patch series on 2026-05-23T09:45:22Z.",
-        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW."
+        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW.",
+        "Verified the usage.rst changes fixing this alert in Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4: https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4. The other commits in the v8 series update different documentation files; zh_TW is not changed by this series."
       ],
-      "classification_note": "confirmed by Dongliang Mu's email: \"Yes, these commits need to be translated in the zh_CN and zh_TW.\"; open/unfixed as of report generation"
+      "classification_note": "fixed by Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4, which updates the affected zh_CN usage.rst documentation; not a claim of mainline inclusion"
     },
     {
       "id": "linux-damon-zh-tw-goal-tuner",
@@ -162,7 +186,7 @@
     {
       "id": "linux-damon-zh-cn-special-purpose-damon-modules",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale translated DAMON documentation",
         "description": "Chinese (zh_CN) translation does not include the new 'Special-purpose DAMON modules' interface entry added in the English usage.rst.",
@@ -212,12 +236,36 @@
           ]
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "message": "docs/zh_CN: update DAMON usage translation",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-08-18T07:03:47Z"
+          },
+          "committer": {
+            "name": "Alex Shi",
+            "date": "2026-09-07T10:25:56+08:00"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/zh_CN/admin-guide/mm/damon/usage.rst"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Imported from the DAMON stale-translation triage set; reported to maintainers as a patch series on 2026-05-23T09:45:22Z.",
-        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW."
+        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW.",
+        "Verified the usage.rst changes fixing this alert in Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4: https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4. The other commits in the v8 series update different documentation files; zh_TW is not changed by this series."
       ],
-      "classification_note": "confirmed by Dongliang Mu's email: \"Yes, these commits need to be translated in the zh_CN and zh_TW.\"; open/unfixed as of report generation"
+      "classification_note": "fixed by Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4, which updates the affected zh_CN usage.rst documentation; not a claim of mainline inclusion"
     },
     {
       "id": "linux-damon-zh-tw-special-purpose-damon-modules",
@@ -282,7 +330,7 @@
     {
       "id": "linux-damon-zh-cn-obsolete-target",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale translated DAMON documentation",
         "description": "English documentation introduces obsolete_target file, but Chinese translation still describes only pid_target.",
@@ -333,12 +381,36 @@
           ]
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "message": "docs/zh_CN: update DAMON usage translation",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-08-18T07:03:47Z"
+          },
+          "committer": {
+            "name": "Alex Shi",
+            "date": "2026-09-07T10:25:56+08:00"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/zh_CN/admin-guide/mm/damon/usage.rst"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Imported from the DAMON stale-translation triage set; reported to maintainers as a patch series on 2026-05-23T09:45:22Z.",
-        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW."
+        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW.",
+        "Verified the usage.rst changes fixing this alert in Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4: https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4. The other commits in the v8 series update different documentation files; zh_TW is not changed by this series."
       ],
-      "classification_note": "confirmed by Dongliang Mu's email: \"Yes, these commits need to be translated in the zh_CN and zh_TW.\"; open/unfixed as of report generation"
+      "classification_note": "fixed by Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4, which updates the affected zh_CN usage.rst documentation; not a claim of mainline inclusion"
     },
     {
       "id": "linux-damon-zh-tw-obsolete-target",
@@ -404,7 +476,7 @@
     {
       "id": "linux-damon-zh-cn-max-nr-snapshots",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale translated DAMON documentation",
         "description": "Chinese translation (zh_CN) is missing the newly added 'max_nr_snapshots' field in both the stats file hierarchy diagram and the stats description.",
@@ -451,12 +523,36 @@
           ]
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "message": "docs/zh_CN: update DAMON usage translation",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-08-18T07:03:47Z"
+          },
+          "committer": {
+            "name": "Alex Shi",
+            "date": "2026-09-07T10:25:56+08:00"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/zh_CN/admin-guide/mm/damon/usage.rst"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Imported from the DAMON stale-translation triage set; reported to maintainers as a patch series on 2026-05-23T09:45:22Z.",
-        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW."
+        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW.",
+        "Verified the usage.rst changes fixing this alert in Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4: https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4. The other commits in the v8 series update different documentation files; zh_TW is not changed by this series."
       ],
-      "classification_note": "confirmed by Dongliang Mu's email: \"Yes, these commits need to be translated in the zh_CN and zh_TW.\"; open/unfixed as of report generation"
+      "classification_note": "fixed by Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4, which updates the affected zh_CN usage.rst documentation; not a claim of mainline inclusion"
     },
     {
       "id": "linux-damon-zh-tw-max-nr-snapshots",
@@ -518,7 +614,7 @@
     {
       "id": "linux-damon-zh-cn-refresh-ms-stats-update",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale translated DAMON documentation",
         "description": "English documentation now mentions refresh_ms as a method to update stats, but the Chinese (zh_CN) translation still says only update_schemes_stats is available.",
@@ -566,12 +662,36 @@
           ]
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "message": "docs/zh_CN: update DAMON usage translation",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-08-18T07:03:47Z"
+          },
+          "committer": {
+            "name": "Alex Shi",
+            "date": "2026-09-07T10:25:56+08:00"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/zh_CN/admin-guide/mm/damon/usage.rst"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Imported from the DAMON stale-translation triage set; reported to maintainers as a patch series on 2026-05-23T09:45:22Z.",
-        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW."
+        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW.",
+        "Verified the usage.rst changes fixing this alert in Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4: https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4. The other commits in the v8 series update different documentation files; zh_TW is not changed by this series."
       ],
-      "classification_note": "confirmed by Dongliang Mu's email: \"Yes, these commits need to be translated in the zh_CN and zh_TW.\"; open/unfixed as of report generation"
+      "classification_note": "fixed by Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4, which updates the affected zh_CN usage.rst documentation; not a claim of mainline inclusion"
     },
     {
       "id": "linux-damon-zh-tw-refresh-ms-stats-update",
@@ -634,7 +754,7 @@
     {
       "id": "linux-damon-zh-cn-addr-unit",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale translated DAMON documentation",
         "description": "Chinese translation of usage.rst lacks 'addr_unit' file in hierarchy and description, contradicting updated English version.",
@@ -680,12 +800,36 @@
           ]
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "message": "docs/zh_CN: update DAMON usage translation",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-08-18T07:03:47Z"
+          },
+          "committer": {
+            "name": "Alex Shi",
+            "date": "2026-09-07T10:25:56+08:00"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/zh_CN/admin-guide/mm/damon/usage.rst"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Imported from the DAMON stale-translation triage set; reported to maintainers as a patch series on 2026-05-23T09:45:22Z.",
-        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW."
+        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW.",
+        "Verified the usage.rst changes fixing this alert in Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4: https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4. The other commits in the v8 series update different documentation files; zh_TW is not changed by this series."
       ],
-      "classification_note": "confirmed by Dongliang Mu's email: \"Yes, these commits need to be translated in the zh_CN and zh_TW.\"; open/unfixed as of report generation"
+      "classification_note": "fixed by Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4, which updates the affected zh_CN usage.rst documentation; not a claim of mainline inclusion"
     },
     {
       "id": "linux-damon-zh-tw-addr-unit",
@@ -746,7 +890,7 @@
     {
       "id": "linux-damon-zh-cn-refresh-ms-file",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale translated DAMON documentation",
         "description": "English documentation adds refresh_ms file but Chinese translation (zh_CN) still shows old hierarchy without it and says two files instead of three.",
@@ -792,12 +936,36 @@
           ]
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "message": "docs/zh_CN: update DAMON usage translation",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-08-18T07:03:47Z"
+          },
+          "committer": {
+            "name": "Alex Shi",
+            "date": "2026-09-07T10:25:56+08:00"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/zh_CN/admin-guide/mm/damon/usage.rst"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Imported from the DAMON stale-translation triage set; reported to maintainers as a patch series on 2026-05-23T09:45:22Z.",
-        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW."
+        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW.",
+        "Verified the usage.rst changes fixing this alert in Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4: https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4. The other commits in the v8 series update different documentation files; zh_TW is not changed by this series."
       ],
-      "classification_note": "confirmed by Dongliang Mu's email: \"Yes, these commits need to be translated in the zh_CN and zh_TW.\"; open/unfixed as of report generation"
+      "classification_note": "fixed by Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4, which updates the affected zh_CN usage.rst documentation; not a claim of mainline inclusion"
     },
     {
       "id": "linux-damon-zh-tw-refresh-ms-file",
@@ -858,7 +1026,7 @@
     {
       "id": "linux-damon-zh-cn-nid",
       "project": "torvalds/linux",
-      "status": "confirmed",
+      "status": "fixed",
       "bug": {
         "type": "stale translated DAMON documentation",
         "description": "English documentation adds 'nid' file but the Simplified Chinese translation still shows the old three-file structure.",
@@ -903,12 +1071,36 @@
           ]
         }
       ],
-      "fixes": [],
+      "fixes": [
+        {
+          "kind": "git_commit",
+          "sha": "54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "url": "https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4",
+          "message": "docs/zh_CN: update DAMON usage translation",
+          "author": {
+            "name": "Doehyun Baek",
+            "email": "doehyunbaek@gmail.com",
+            "date": "2026-08-18T07:03:47Z"
+          },
+          "committer": {
+            "name": "Alex Shi",
+            "date": "2026-09-07T10:25:56+08:00"
+          },
+          "files_changed": [
+            {
+              "path": "Documentation/translations/zh_CN/admin-guide/mm/damon/usage.rst"
+            }
+          ],
+          "branch": "docs-next",
+          "landed_upstream": true
+        }
+      ],
       "search_notes": [
         "Imported from the DAMON stale-translation triage set; reported to maintainers as a patch series on 2026-05-23T09:45:22Z.",
-        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW."
+        "Dongliang Mu confirmed by email at 3:22 AM that these commits need to be translated in the zh_CN and zh_TW.",
+        "Verified the usage.rst changes fixing this alert in Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4: https://git.kernel.org/pub/scm/linux/kernel/git/alexs/linux.git/commit/?id=54b4bbb0736250dbf7a90e0b97af59421eef27d4. The other commits in the v8 series update different documentation files; zh_TW is not changed by this series."
       ],
-      "classification_note": "confirmed by Dongliang Mu's email: \"Yes, these commits need to be translated in the zh_CN and zh_TW.\"; open/unfixed as of report generation"
+      "classification_note": "fixed by Alex Shi's docs-next commit 54b4bbb0736250dbf7a90e0b97af59421eef27d4, which updates the affected zh_CN usage.rst documentation; not a claim of mainline inclusion"
     },
     {
       "id": "linux-damon-zh-tw-nid",
